@@ -32,7 +32,7 @@ export const Card = memo(({ index, isSelected }: Props) => {
   return (
     <div className={clsx('card', getColor(index), isSelected && 'selected')}>
       <div className="card__suits">
-        {suitPositions[index % 13].map(createSuit(suit))}
+        {suitPositions[(index + 1) % 13].map(createSuit(suit))}
       </div>
       <div className="card__topleft">
         <div className="card__corner--rank">{rank}</div>
