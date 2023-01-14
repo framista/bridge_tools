@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bridge_tools/static/css/main.14fe03df.css",
-    "main.js": "/bridge_tools/static/js/main.8241d509.js",
+    "main.js": "/bridge_tools/static/js/main.1c963831.js",
     "static/js/787.25395141.chunk.js": "/bridge_tools/static/js/787.25395141.chunk.js",
     "index.html": "/bridge_tools/index.html",
     "main.14fe03df.css.map": "/bridge_tools/static/css/main.14fe03df.css.map",
-    "main.8241d509.js.map": "/bridge_tools/static/js/main.8241d509.js.map",
+    "main.1c963831.js.map": "/bridge_tools/static/js/main.1c963831.js.map",
     "787.25395141.chunk.js.map": "/bridge_tools/static/js/787.25395141.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14fe03df.css",
-    "static/js/main.8241d509.js"
+    "static/js/main.1c963831.js"
   ]
 }
