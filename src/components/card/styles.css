@@ -1,0 +1,61 @@
+.card {
+  display: inline-block;
+  position: relative;
+  width: 5em;
+  height: 7em;
+  background-color: white;
+  box-shadow: 0 0.0625em 0.125em var(--gray);
+  border-radius: 0.25em;
+  cursor: pointer;
+  user-select: none;
+}
+.card:hover {
+  background-color: var(--purple);
+}
+
+.card.red {
+  color: red;
+}
+
+.card.selected {
+  background-color: var(--gray);
+}
+
+.card__topleft {
+  position: absolute;
+  top: 0.5em;
+  left: 0.75em;
+}
+
+.card__bottomright {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.75em;
+  transform: rotate(180deg);
+}
+
+.card__corner--rank,
+.card__corner--suit {
+  font-size: 0.75em;
+  line-height: 1.25;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.card__suits {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17.5%;
+  height: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.card__suit {
+  font-size: 1em;
+  position: absolute;
+}
+
+.card__suit--mirrored {
+  transform: rotate(180deg);
+}

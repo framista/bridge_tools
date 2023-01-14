@@ -1,12 +1,10 @@
-import { dropLast, without } from 'ramda';
 import { useState, useCallback } from 'react';
-
-const isAnyCardSelected = (cards: number[]) => cards.length > 0;
+import { dropLast, isEmpty, without } from 'ramda';
 
 export const useCardSelection = () => {
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
 
-  const clearSelection = useCallback(() => {
+  const onClearSelection = useCallback(() => {
     setSelectedCards([]);
   }, []);
 
@@ -16,15 +14,15 @@ export const useCardSelection = () => {
     );
   }, []);
 
-  const undo = useCallback(() => {
-    if (!isAnyCardSelected(selectedCards)) return;
+  const onUndo = useCallback(() => {
+    if (isEmpty(selectedCards)) return;
     setSelectedCards((prev) => dropLast(1, prev));
   }, [selectedCards]);
 
   return {
     selectedCards,
-    clearSelection,
     onCardClick,
-    undo,
+    onClearSelection,
+    onUndo,
   };
 };

@@ -1,11 +1,7 @@
-import { Cards } from './components/cards';
+import { CardsSelection } from './components/pages/cardsSelection';
 
 function App() {
-  return (
-    <div className="App">
-      <Cards />
-    </div>
-  );
+  return <CardsSelection />;
 }
 
 export default App;

@@ -1,0 +1,19 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--orange);
+}
+
+.history__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 20px;
+  background-color: var(--orange);
+}
+
+.history__break {
+  width: 30px;
+}
