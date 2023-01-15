@@ -1,10 +1,11 @@
 import { memo } from 'react';
 import { Button } from '../../../common';
+import { UseCardSelectionType } from '../types';
 import './styles.css';
 
 type Props = {
-  onClearSelection: () => void;
-  onUndo: () => void;
+  onClearSelection: UseCardSelectionType['onClearSelection'];
+  onUndo: UseCardSelectionType['onUndo'];
 };
 
 export const Toolbar = memo(({ onClearSelection, onUndo }: Props) => (

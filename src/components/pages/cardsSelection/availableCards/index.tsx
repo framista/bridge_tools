@@ -1,11 +1,12 @@
 import { memo } from 'react';
 import { Card } from '../../../card';
 import { emptyCardsArray } from '../../../card/utils';
+import { UseCardSelectionType } from '../types';
 import './styles.css';
 
 type Props = {
   selectedCards: number[];
-  onCardClick: (index: number) => void;
+  onCardClick: UseCardSelectionType['onCardClick'];
 };
 
 export const AvailableCards = memo(({ selectedCards, onCardClick }: Props) => {

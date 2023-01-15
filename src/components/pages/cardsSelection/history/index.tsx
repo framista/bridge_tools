@@ -6,12 +6,12 @@ import {
   OnDragEndResponder,
 } from 'react-beautiful-dnd';
 import { Card } from '../../../card';
-import { useCardSelection } from '../useCardSelection';
+import { UseCardSelectionType } from '../types';
 import './styles.css';
 
 type Props = {
   selectedCards: number[];
-  reorderSelection: ReturnType<typeof useCardSelection>['reorderSelection'];
+  reorderSelection: UseCardSelectionType['reorderSelection'];
 };
 
 const getListStyle = (isDraggingOver: boolean) => ({
