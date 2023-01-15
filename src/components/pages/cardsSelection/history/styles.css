@@ -1,19 +1,18 @@
 .history {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 20px;
   background-color: var(--orange);
 }
 
 .history__content {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
-  padding: 20px;
   background-color: var(--orange);
+  padding: 8px 5px 5px;
+  overflow: auto;
 }
 
 .history__break {
-  width: 30px;
+  border-left: 2px dashed var(--gray);
 }

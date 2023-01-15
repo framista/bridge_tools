@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { dropLast, isEmpty, without } from 'ramda';
+import { dropLast, insert, isEmpty, pipe, remove, without } from 'ramda';
 
 export const useCardSelection = () => {
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
@@ -19,10 +19,22 @@ export const useCardSelection = () => {
     setSelectedCards((prev) => dropLast(1, prev));
   }, [selectedCards]);
 
+  const reorderSelection = useCallback(
+    (startIndex: number, endIndex: number) => {
+      const newSelection = pipe<[number[]], number[], number[]>(
+        remove(startIndex, 1),
+        insert(endIndex, selectedCards[startIndex])
+      )(selectedCards);
+      setSelectedCards(newSelection);
+    },
+    [selectedCards]
+  );
+
   return {
     selectedCards,
     onCardClick,
     onClearSelection,
     onUndo,
+    reorderSelection,
   };
 };

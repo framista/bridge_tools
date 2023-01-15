@@ -11,7 +11,6 @@ type Props = {
 export const AvailableCards = memo(({ selectedCards, onCardClick }: Props) => {
   return (
     <div className="availableCards">
-      <h3>Available cards</h3>
       <div className="availableCards__content">
         {emptyCardsArray.map((_, index) => (
           <div key={index} onClick={() => onCardClick(index)}>
